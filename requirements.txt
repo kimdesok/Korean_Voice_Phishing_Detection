@@ -8,3 +8,6 @@ moviepy~=1.0.3
 tqdm~=4.62.3
 requests~=2.27.1
 numpy~=1.21.5
+textblob
+pydot
+graphviz
