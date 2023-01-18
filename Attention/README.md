@@ -20,10 +20,13 @@ The figures below show the loss, accuracy, and the classification report.
 <img src=https://user-images.githubusercontent.com/64822593/213069089-a971596c-01fb-4749-910c-1daec9c14c99.png width="600" height="480">
 <img src=https://user-images.githubusercontent.com/64822593/213071179-4e845c8d-541c-4913-80d9-8130317c4592.png width="600" height="300">
 
-To compare the performance of the attention based model to other models such a CNN-BiLSTM, CNN, BiLSTM, and LSTM.
+To compare the performance of the attention based model to other models such as CNN-BiLSTM, CNN, BiLSTM, and LSTM.
 By training and testing the rest of the methods, a performance comparison table could be prepared:
 
 ![image](https://user-images.githubusercontent.com/64822593/213104579-68a9daa7-7ce6-43ee-aef9-b8074f13f9a6.png)
 
 
+The proposed attention based CNN-BiLSTM model and CNN-BiLSTM resulted in the same accuracy but the former converged a lot faster, about three times.
+At the moment, it is not quite sure that this is a known fact.  CNN-BiLSTM seem to fluctuate a quite bit at the beginning in terms of accuracy and loss but eventually converged after about 25 epochs.
 
+Later on CNN, BiLSTM, and LSTM....
