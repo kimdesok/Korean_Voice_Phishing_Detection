@@ -23,7 +23,7 @@ The figures below show the loss, accuracy, and the classification report.
 To compare the performance of the attention based model to other models such as CNN-BiLSTM, CNN, BiLSTM, and LSTM.
 By training and testing the rest of the methods, a performance comparison table could be prepared:
 
-![image](https://user-images.githubusercontent.com/64822593/213104579-68a9daa7-7ce6-43ee-aef9-b8074f13f9a6.png)
+![image](https://user-images.githubusercontent.com/64822593/213107883-1da2fbb5-443d-49b1-ba3f-604735677eb6.png)
 
 
 The proposed attention based CNN-BiLSTM model and CNN-BiLSTM resulted in the same accuracy but the former converged a lot faster, about three times.
