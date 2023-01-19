@@ -20,8 +20,8 @@ For this step, outfile_space_20230117.npz needs to be loaded and is available at
 
 The figures below show the loss, accuracy, and the classification report.
 
-<img src=https://user-images.githubusercontent.com/64822593/213070074-4acfba7b-6ad6-4428-aefa-708c3422f0c5.png width="600" height="480">
-<img src=https://user-images.githubusercontent.com/64822593/213069089-a971596c-01fb-4749-910c-1daec9c14c99.png width="600" height="480">
+<img src=https://user-images.githubusercontent.com/64822593/213410471-2a277244-73dc-4304-a8ed-7d0bdae23494.png width="600" height="480">
+<img src=https://user-images.githubusercontent.com/64822593/213410492-5266d5e2-71ee-440a-9d50-0626839f2e4b.png width="600" height="480">
 <img src=https://user-images.githubusercontent.com/64822593/213071179-4e845c8d-541c-4913-80d9-8130317c4592.png width="600" height="300">
 
 To compare the performance of the attention based model to other models such as CNN-BiLSTM, CNN, BiLSTM, and LSTM.
