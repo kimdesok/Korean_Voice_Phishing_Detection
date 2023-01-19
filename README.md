@@ -13,15 +13,17 @@ This repository is organized as below:
 This model has been implemented in a script named 'Att-Based CNN-BiLSTM for Detecting Korean Vishing.ipynb' available at https://github.com/selfcontrol7/Korean_Voice_Phishing_Detection/tree/main/Attention (the original repository created by the first author[1][2])
 
 Several minor things to mind before a fully blown execution of the script: <br>
-1)Two text input files are required (that are NOT provided at the repo: One contains non vishing tokens and the orther contains vishing tokens.  <br>
+
+1) Two text input files are required (that are NOT provided at the repo: One contains non vishing tokens and the orther contains vishing tokens.  <br>
 For this step, outfile_space_20230117.npz needs to be loaded and is available at https://github.com/kimdesok/Korean_Voice_Phishing_Detection/tree/main/Attention. <br>
+
 2) To evaluate the performance of a trained model, the model needs to be (re)compiled just before 'model.evaluate()' command.
 
 > model = load_model(model_path, custom_objects=create_custom_objects()) <br>
 > **model.compile(loss = "categorical_crossentropy", optimizer = Adam(learning_rate=learning_rate, decay=learning_decay), metrics = ['accuracy'])** <br>
 > model.evaluate(X_test, y_test) <br>
 
-3) pip install textblob, pydot, and graphviz (See the updated 'requirement.txt')
+3) Tensorflow version 2.4 and python 3.7 were installed (See the updated 'requirement.txt' for more installation). <br>
 
 The figures below show the loss, accuracy, and the classification report.
 
