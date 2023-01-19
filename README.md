@@ -25,19 +25,22 @@ For this step, outfile_space_20230117.npz needs to be loaded and is available at
 
 3) Tensorflow version 2.4 and python 3.7 were installed (See the updated 'requirement.txt' for more installation). <br>
 
-The figures below show the loss, accuracy, and the classification report.
+The figures below show the loss, accuracy, and the classification report of the attention based CNN-BiLSTM model. Training, validation, test sets were divided into 6.4:1.6:2. The training was performed by having epochs and patience set by 50 and 20, respectively.
 
-<img src=https://user-images.githubusercontent.com/64822593/213070074-4acfba7b-6ad6-4428-aefa-708c3422f0c5.png width="600" height="480">
-<img src=https://user-images.githubusercontent.com/64822593/213069089-a971596c-01fb-4749-910c-1daec9c14c99.png width="600" height="480">
-<img src=https://user-images.githubusercontent.com/64822593/213071179-4e845c8d-541c-4913-80d9-8130317c4592.png width="600" height="300">
+<img src=https://user-images.githubusercontent.com/64822593/213472097-02add1a8-4da1-4dd8-b546-ec9268794b8b.png width="600" height="420">
+<img src=https://user-images.githubusercontent.com/64822593/213472326-605c235b-b70e-4c20-9912-a4f0a09f25ad.png width="600" height="420">
+<img src=https://user-images.githubusercontent.com/64822593/213472821-d3ec26e9-4cdf-4ef9-a9c0-42af44c4d48c.png width="600" height="300">
 
 To compare the performance of the attention based model to other models such as CNN-BiLSTM, CNN, BiLSTM, and LSTM.
 By training and testing the rest of the methods, a performance comparison table could be prepared:
 
-![image](https://user-images.githubusercontent.com/64822593/213107883-1da2fbb5-443d-49b1-ba3f-604735677eb6.png)
+<img src=https://user-images.githubusercontent.com/64822593/213474862-e1e0d612-0951-4e68-ba14-5df760748a4a.png width="600" height="400">
+<img src=https://user-images.githubusercontent.com/64822593/213474593-fe9f122a-45d6-4872-a7ce-c10b2d041bfe.png width="600" height="400">
 
-The proposed attention based CNN-BiLSTM model and CNN-BiLSTM resulted in the same accuracy but the former converged a lot faster, about three times.
-At the moment, it is not quite sure that this is a known fact.  CNN-BiLSTM seems to fluctuate a quite bit at the beginning of training in terms of accuracy and loss but eventually converged after about 25 epochs.
+![image](https://user-images.githubusercontent.com/64822593/213474128-ab6c8ef6-aa8d-44e3-8500-25fc450b9efd.png)
+
+The proposed attention based CNN-BiLSTM model and CNN-BiLSTM resulted in the same accuracy but the former converged slightly faster.
+CNN-BiLSTM seems to fluctuate a quite bit at the beginning of training in terms of accuracy and loss but eventually converged at about 25 epochs.
 
 Later on CNN, BiLSTM, and LSTM....
 
