@@ -1,5 +1,9 @@
 ## Classification of Voice Phishing Texts vs. Normal Phone Conversation Texts
 A. Attention-based CNN-BiLSTM model
+B. CNN-BiSLTM model
+C. BiLSTM model
+D. LSTM model
+E. CNN model 
 
 This model has been implemented in a script named 'Att-Based CNN-BiLSTM for Detecting Korean Vishing.ipynb' available at https://github.com/selfcontrol7/Korean_Voice_Phishing_Detection/tree/main/Attention (the original repository created by the first author)
 
