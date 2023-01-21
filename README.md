@@ -1,16 +1,25 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/selfcontrol7/Korean_Voice_Phishing_Detection/HEAD)
 
-# AI-based Voice Phishing Detection in Korean Texts
-Several machine learning and deep learning methods were developed to classify texts in Korean involved with voice phishing [1][2].
-This repository is organized as below:
-- **Attention** : contains source codes for investigating mostly an attention-based detection model and comparing its performance to other models such as CNN-BiSLTM, BiLSTM, LSTM, and CNN models 
+# Deep Learning based Detection of Fraudulent Phone Calls in Korean Transcripts
+Several machine learning and deep learning methods were developed to classify texts in Korean involved with 'voice phishing' [1][2].
+This fork is derived from the original repository organized as below:
+- **Attention** : contains source codes for investigating the performance of an attention-based detection model compared to others such as CNN-BiSLTM, BiLSTM, LSTM, and CNN models 
 - **Data_Collection_Preprocessing** : contains source codes for preprocessing raw data and create the datasets 
-- **KoBERT** : contains source codes for implementing a KoBERT detection model
+- **KoBERT** : contains a source code and a related dataset for implementing a pretrained KoBERT based detection model.
 - **ML_DL_models** : contains  source codes for implementing a shadow ML and DL models
+
+## Datasets
+- 2,927 entries of texts transcribed from the actual phone conversation resulting in a transcript dataset called KorCCVi (or KorCCViD)
+- 2,232 entries from non fraudulent call texts whose topics range from travel, food, movies, pet care, etc.  Just ordinary conversation but rather long (repsonses and length data not shown). 
+- 695 entries from supposedly fraudulent call texts whose topics range from calls about illegal or criminal financial transactions, bank loans, suspected involvement of criminal activities etc.
+- No special characters were present in the transcripts but some duplicates removed.  Non fraudulent 2,232 vs. Fraudulent 692 transcripts
+- Preprocessed to remove stop words such as ["을", "를", "이", "가", "은", "는", "ㅡ", "의", "에","에서", "로", "으로", "에요", "예요", "으시","XXX", "xxx"], extra characters, etc (more detailed description may be needed).
+- From the fraudulent transcripts, 42,415 counts of unique vocabulary and 222,943 counts of words were prepared.
+- From the non fraudulent transcripts, 255,394 counts of unique vocabulary counts and 3,453,048 counts of words were prepared.
 
 ## Classification of Voice Phishing Texts vs. Normal Phone Conversation Texts
 ### A. Attention-based CNN-BiLSTM model
-This model has been implemented in a script named 'Att-Based CNN-BiLSTM for Detecting Korean Vishing.ipynb' available at https://github.com/selfcontrol7/Korean_Voice_Phishing_Detection/tree/main/Attention (the original repository created by the first author[1][2])
+The model has been implemented in a script named 'Att-Based CNN-BiLSTM for Detecting Korean Vishing.ipynb' available at https://github.com/selfcontrol7/Korean_Voice_Phishing_Detection/tree/main/Attention (the original repository created by the first author[1][2])
 
 Several minor things to mind before a fully blown execution of the script: <br>
 
@@ -43,6 +52,20 @@ The proposed attention based CNN-BiLSTM model and CNN-BiLSTM resulted in the sam
 CNN-BiLSTM seems to fluctuate a quite bit at the beginning of training in terms of accuracy and loss but eventually converged at about 25 epochs.
 
 Later on CNN, BiLSTM, and LSTM....
+
+### B. A KoBERT based detection model
+
+-Dataset used: KorCCViDv1.3_fullcleansed.csv
+-Train:Validation:Test ratio set to 0.64:0.16:0.2
+- Epochs of 20, learning rate of 0.00001, batch size of 32, max_len = 64
+-Performance metrics  at training   at test
+    acc                 0.9955      0.9961
+    recall              0.9892      1.0000
+    precision           1.0000      0.9914
+    f1                  0.9946      0.9957  
+    
+- Inference time per transcript less than 10 ms.
+            
 
 ## References
 [1] M. K. M. Boussougou, S. Jin, D. Chang, and D.-J. Park, “Korean Voice Phishing Text Classification Performance Analysis Using Machine Learning Techniques,” Proceedings of the Korea Information Processing Society Conference, pp. 297–299, Nov. 2021.<br>
