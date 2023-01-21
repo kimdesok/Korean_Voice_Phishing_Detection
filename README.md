@@ -55,14 +55,14 @@ Later on CNN, BiLSTM, and LSTM....
 
 ### B. A KoBERT based detection model
 
--Dataset used: KorCCViDv1.3_fullcleansed.csv
--Train:Validation:Test ratio set to 0.64:0.16:0.2
-- Epochs of 20, learning rate of 0.00001, batch size of 32, max_len = 64
--Performance metrics  at training   at test
-    acc                 0.9955      0.9961
-    recall              0.9892      1.0000
-    precision           1.0000      0.9914
-    f1                  0.9946      0.9957  
+-Dataset used: KorCCViDv1.3_fullcleansed.csv <br>
+-Train:Validation:Test ratio set to 0.64:0.16:0.2 <br>
+-Epochs of 20, learning rate of 0.00001, batch size of 32, max_len = 64 <br>
+-Performance metrics  at training   at test <br>
+    acc                 0.9955      0.9961  <br>
+    recall              0.9892      1.0000  <br>
+    precision           1.0000      0.9914  <br>
+    f1                  0.9946      0.9957  <br>
     
 - Inference time per transcript less than 10 ms.
             
