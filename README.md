@@ -66,6 +66,25 @@ Later on CNN, BiLSTM, and LSTM....
     
 - Inference time per transcript less than 10 ms.
             
+## Google Cloud's Cloud Speech-to-Text API
+- Open an account at Google Cloud
+- Create a project
+- Create a bucket (named 'example-bucket-for-audio2texts' in this case)
+- Create a billing and link that to the project
+- Give IAM a role for 'Storage Admin' or something equivalent.
+- Enable the Cloud Speech-to-Text API for the project
+- At the terminal, execute 'gcloud auth application-default login' and enter the key (by following the procedure).
+- Edit gcloud.ini as below:
+> [CREDENTIALS] <br>
+> BUCKET_NAME = example-bucket-for-audio2texts <br>
+> JSON = /home/ubuntu/.config/gcloud/application_default_credentials.json <br>
+- Run 'transcribe_audio.py' available in the repository 'Data_Collection_Preprocessing'
+
+### Transcription Results
+http://pds.darakwon.co.kr/download/mp3Down.asp?p_id=3292&pf_id=49672 <br>
+"Confidence: 0.8026149868965149 이은경 vacation 무엇입니까? 가방입니다. 학생이니까네 학생입니다 누구예요 친구예요 고향이 어디예요?" <br>
+http://pds.darakwon.co.kr/download/mp3Down.asp?p_id=3292&pf_id=49672 <br>
+"Confidence: 0.8690810799598694 두 개가 의자 위에 있어요. 개가 의자 위에 있습니다. 우리 집이 신촌에 있어요. 우리 집이 신촌에 있습니다. 남자 친구가 있어요 남자 친구가 있으니 야." <br>
 
 ## References
 [1] M. K. M. Boussougou, S. Jin, D. Chang, and D.-J. Park, “Korean Voice Phishing Text Classification Performance Analysis Using Machine Learning Techniques,” Proceedings of the Korea Information Processing Society Conference, pp. 297–299, Nov. 2021.<br>
