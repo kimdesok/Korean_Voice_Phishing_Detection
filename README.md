@@ -81,9 +81,9 @@ Later on CNN, BiLSTM, and LSTM....
 - Run 'transcribe_audio.py' available in the repository 'Data_Collection_Preprocessing'
 
 ### Transcription Results
-http://pds.darakwon.co.kr/download/mp3Down.asp?p_id=3292&pf_id=49672 <br>
+https://drive.google.com/file/d/1LjYVrZwafKPAxwUElChQmM9_YyawpUo3/view?usp=share_link <br>
 "Confidence: 0.8026149868965149 이은경 vacation 무엇입니까? 가방입니다. 학생이니까네 학생입니다 누구예요 친구예요 고향이 어디예요?" <br>
-http://pds.darakwon.co.kr/download/mp3Down.asp?p_id=3292&pf_id=49672 <br>
+https://drive.google.com/file/d/1v238dOzTYk1icx5nGOUWW3aItODAoBBk/view?usp=share_link <br>
 "Confidence: 0.8690810799598694 두 개가 의자 위에 있어요. 개가 의자 위에 있습니다. 우리 집이 신촌에 있어요. 우리 집이 신촌에 있습니다. 남자 친구가 있어요 남자 친구가 있으니 야." <br>
 
 ## References
