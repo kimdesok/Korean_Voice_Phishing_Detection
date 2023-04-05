@@ -3,9 +3,9 @@
 <h1>Korean Text classification with KoBERT</h1>
 
 ## **Aim of the project**
-To build a text classification model capable to detect whether the anput text data is voice phishing ("1") or non-voice phishing ("0") related conversation text an Aorean.
+To build a text classification model capable of detecting if the input text data is voice phishing ("1") or non-voice phishing ("0") related conversation text in Korean.
 
-The API used are Tensorflow for BERT model and Pytorch from KoBERT model.
+The APIs are based on Tensorflow for BERT model and Pytorch from KoBERT model.
 
 ## Korean Text Input Data in dataframe
 ![image](https://user-images.githubusercontent.com/64822593/224244496-89ec6b01-3b1d-45e4-ab23-8d66a1259d0d.png)
