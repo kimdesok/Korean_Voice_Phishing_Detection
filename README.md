@@ -1,18 +1,18 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/selfcontrol7/Korean_Voice_Phishing_Detection/HEAD)
 
-# Deep Learning based Detection of Fraudulent Phone Calls in Korean Transcripts
+# Machine Learning based Detection of Fraudulent Phone Calls Transcribed in Korean
 Several machine learning and deep learning methods were developed to classify texts in Korean involved with 'voice phishing' [1][2].
 This fork is derived from the original repository organized as below:
-- **Attention** : contains source codes for investigating the performance of an attention-based detection model compared to others such as CNN-BiSLTM, BiLSTM, LSTM, and CNN models 
-- **Data_Collection_Preprocessing** : contains source codes for preprocessing raw data and create the datasets 
-- **KoBERT** : contains a source code and a related dataset for implementing a pretrained KoBERT based detection model.
-- **ML_DL_models** : contains  source codes for implementing a shadow ML and DL models
+- **Attention** : contains source codes for investigating the performance of an attention-based detection model compared to others such as CNN-BiSLTM, BiLSTM, LSTM, and CNN models. 
+- **Data_Collection_Preprocessing** : contains source codes for preprocessing raw data and create the datasets.
+- **KoBERT** : contains a source code and a related dataset for implementing a pretrained KoBERT based model.
+- **ML_DL_models** : contains source codes for implementing a shadow(?) ML and DL models
 
 ## Datasets
 - 2,927 entries of texts transcribed from the actual phone conversation resulting in a transcript dataset called KorCCVi (or KorCCViD)
-- 2,232 entries from non fraudulent call texts whose topics range from travel, food, movies, pet care, etc.  Just ordinary conversation but rather long (repsonses and length data not shown). 
+- 2,232 entries from non fraudulent call texts whose topics range from travel, food, movies, pet care, etc.  Just ordinary daily conversation but rather long (repsonses and length data not shown). 
 - 695 entries from supposedly fraudulent call texts whose topics range from calls about illegal or criminal financial transactions, bank loans, suspected involvement of criminal activities etc.
-- No special characters were present in the transcripts but some duplicates removed.  Non fraudulent 2,232 vs. Fraudulent 692 transcripts
+- No special characters were present in the transcripts but some duplicates were removed.  Non fraudulent 2,232 vs. Fraudulent 692 transcripts
 - Preprocessed to remove stop words such as ["을", "를", "이", "가", "은", "는", "ㅡ", "의", "에","에서", "로", "으로", "에요", "예요", "으시","XXX", "xxx"], extra characters, etc (more detailed description may be needed).
 - From the fraudulent transcripts, 42,415 counts of unique vocabulary and 222,943 counts of words were prepared.
 - From the non fraudulent transcripts, 255,394 counts of unique vocabulary counts and 3,453,048 counts of words were prepared.
@@ -23,7 +23,7 @@ The model has been implemented in a script named 'Att-Based CNN-BiLSTM for Detec
 
 Several minor things to mind before a fully blown execution of the script: <br>
 
-1) Two text input files are required (that are NOT provided at the repo: One contains non vishing tokens and the orther contains vishing tokens.  <br>
+1) Two text input files are required (that are NOT provided at the repo: One contains non vishing tokens and the other contains vishing tokens.  <br>
 For this step, outfile_space_20230117.npz needs to be loaded and is available at https://github.com/kimdesok/Korean_Voice_Phishing_Detection/tree/main/Attention. <br>
 
 2) To evaluate the performance of a trained model, the model needs to be (re)compiled just before 'model.evaluate()' command.
