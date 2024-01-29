@@ -1,6 +1,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/selfcontrol7/Korean_Voice_Phishing_Detection/HEAD)
 
-# Machine Learning based Detection of Fraudulent Phone Calls Transcribed in Korean
+# Detection of Fraudulent Phone Calls 
+### Transcribed in Korean, Machine Learning based
 Several machine learning and deep learning methods were developed to classify texts in Korean involved with 'voice phishing' [1][2].
 This fork is derived from the original repository organized as below:
 - **Attention** : contains source codes for investigating the performance of an attention-based detection model compared to others such as CNN-BiSLTM, BiLSTM, LSTM, and CNN models. 
